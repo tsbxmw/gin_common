@@ -1,0 +1,27 @@
+package common
+
+const (
+    HTTP_MISS_PARAMS  = 101
+    HTTP_PARAMS_ERROR = 102
+
+    HTTP_STATUS_OK = 200
+
+    HTTP_AUTH_ERROR     = 403
+    HTTP_INTERNAL_ERROR = 503
+
+    REDIS_SET_ERROR = 1001
+    REDIS_GET_ERROR = 1002
+
+    MYSQL_QUERY_ERROR  = 2001
+    MYSQL_CREATE_ERROR = 2002
+    MYSQL_UPDATE_ERROR = 2003
+
+    HTTP_RESPONSE_OK = 0
+)
+
+const (
+    HTTP_AUTH_ERROR_MSG = "Auth Error"
+    HTTP_MESSAGE_OK = "success"
+    MYSQL_CREATE_ERROR_MSG = "Mysql Create Error"
+
+)
