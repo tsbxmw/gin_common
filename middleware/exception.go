@@ -4,7 +4,7 @@ import (
     "bytes"
     "fmt"
     "github.com/gin-gonic/gin"
-    "github.com/tsbxmw/datasource/common"
+    common "github.com/tsbxmw/gin_common"
     "io/ioutil"
     "net"
     "net/http/httputil"

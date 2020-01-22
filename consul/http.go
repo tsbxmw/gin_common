@@ -4,7 +4,7 @@ import (
 	"github.com/hashicorp/consul/api"
 	consulapi "github.com/hashicorp/consul/api"
 	"github.com/sirupsen/logrus"
-	"github.com/tsbxmw/datasource/common"
+	common "github.com/tsbxmw/gin_common"
 	"math/rand"
 	"os"
 	"strconv"

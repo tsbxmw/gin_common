@@ -2,7 +2,7 @@ package middleware
 
 import (
     "github.com/gin-gonic/gin"
-    "github.com/tsbxmw/datasource/common"
+    common "github.com/tsbxmw/gin_common"
 )
 
 func ResponseMiddleware() gin.HandlerFunc {

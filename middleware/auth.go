@@ -1,7 +1,7 @@
 package middleware
 
 import (
-    "github.com/tsbxmw/datasource/common"
+    common "github.com/tsbxmw/gin_common"
     "encoding/json"
     "fmt"
     "github.com/gin-gonic/gin"

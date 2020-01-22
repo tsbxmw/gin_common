@@ -1,8 +1,8 @@
 package worker
 
 import (
-    "github.com/tsbxmw/datasource/common"
-    "github.com/tsbxmw/datasource/common/mq"
+    common "github.com/tsbxmw/gin_common"
+    mq "github.com/tsbxmw/gin_common/mq"
     "fmt"
     "github.com/smallnest/rpcx/log"
     "github.com/streadway/amqp"

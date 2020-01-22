@@ -7,7 +7,7 @@ import (
 	rotatelogs "github.com/lestrrat/go-file-rotatelogs"
 	"github.com/rifflock/lfshook"
 	"github.com/sirupsen/logrus"
-	"github.com/tsbxmw/datasource/common"
+	common "github.com/tsbxmw/gin_common"
 	"io/ioutil"
 	"os"
 	"time"
