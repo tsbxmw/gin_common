@@ -3,14 +3,15 @@ package middleware
 import (
 	"bytes"
 	"fmt"
+	"io/ioutil"
+	"os"
+	"time"
+
 	"github.com/gin-gonic/gin"
 	rotatelogs "github.com/lestrrat/go-file-rotatelogs"
 	"github.com/rifflock/lfshook"
 	"github.com/sirupsen/logrus"
 	common "github.com/tsbxmw/gin_common"
-	"io/ioutil"
-	"os"
-	"time"
 )
 
 func LoggerInit(e *gin.Engine, file string) {
@@ -54,7 +55,7 @@ func loggerMiddleware(file string) (logger gin.HandlerFunc, err error) {
 
 	logWriter, err := rotatelogs.New(
 		apiLogPath+".%Y-%m-%d-%H-%M.log",
-		rotatelogs.WithLinkName(apiLogPath+"-temp"),
+		// rotatelogs.WithLinkName(apiLogPath+"-temp"),
 		rotatelogs.WithMaxAge(7*24*time.Hour),
 		rotatelogs.WithRotationTime(24*time.Hour),
 	)
@@ -118,7 +119,7 @@ func loggerErrorMiddleware(file string) (logger gin.HandlerFunc, err error) {
 
 	logErrorWriter, err := rotatelogs.New(
 		apiErrorLogPath+".%Y-%m-%d-%H-%M.error.log",
-		rotatelogs.WithLinkName(apiErrorLogPath+"-temp"),
+		// rotatelogs.WithLinkName(apiErrorLogPath+"-temp"),
 		rotatelogs.WithMaxAge(7*24*time.Hour),
 		rotatelogs.WithRotationTime(24*time.Hour),
 	)
@@ -188,7 +189,7 @@ func loggerRecoveryMiddleware(file string) (logger gin.HandlerFunc, err error) {
 
 	logRecoveryWriter, err := rotatelogs.New(
 		apiRecoveryLogPath+".%Y-%m-%d-%H-%M.log",
-		rotatelogs.WithLinkName(apiRecoveryLogPath+"-temp"),
+		// rotatelogs.WithLinkName(apiRecoveryLogPath+"-temp"),
 		rotatelogs.WithMaxAge(7*24*time.Hour),
 		rotatelogs.WithRotationTime(24*time.Hour),
 	)
